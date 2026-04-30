@@ -1,0 +1,27 @@
+class ContainerHive < Formula
+  desc "Swarm it. Build it. Run it"
+  homepage "https://github.com/ContainerHive/ContainerHive"
+  version "$version"
+
+  depends_on "zstd" => :build
+
+  on_macos do
+    on_arm do
+      url "https://github.com/ContainerHive/ContainerHive/releases/download/v$version/darwin-arm64.tar.zst"
+      sha256 "$sha256_mac_arm"
+    end
+    on_intel do
+      url "https://github.com/ContainerHive/ContainerHive/releases/download/v$version/darwin-amd64.tar.zst"
+      sha256 "$sha256_mac_amd"
+    end
+  end
+
+  def install
+    bin.install "ch"
+    prefix.install "LICENSE.txt", "NOTICE"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/ch --version")
+  end
+end
