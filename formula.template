@@ -1,4 +1,4 @@
-class ContainerHive < Formula
+class Containerhive < Formula
   desc "Swarm it. Build it. Run it"
   homepage "https://github.com/ContainerHive/ContainerHive"
   version "$version"
