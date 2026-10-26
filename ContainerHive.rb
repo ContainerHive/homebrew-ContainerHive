@@ -1,18 +1,18 @@
 class Containerhive < Formula
   desc "Swarm it. Build it. Run it"
   homepage "https://github.com/ContainerHive/ContainerHive"
-  version "1.21.0"
+  version "1.22.0"
 
   depends_on "zstd" => :build
 
   on_macos do
     on_arm do
-      url "https://github.com/ContainerHive/ContainerHive/releases/download/v1.21.0/darwin-arm64.tar.zst"
-      sha256 "6c44444e227063f4cfe09d958d07d1ec6db8a4f34973c4d3ccf1875afa530d48"
+      url "https://github.com/ContainerHive/ContainerHive/releases/download/v1.22.0/darwin-arm64.tar.zst"
+      sha256 "7644f0b96ae7896a6b4e189deaea256882097da78c91e8ebdf0d7f1eb026d865"
     end
     on_intel do
-      url "https://github.com/ContainerHive/ContainerHive/releases/download/v1.21.0/darwin-amd64.tar.zst"
-      sha256 "cde7209d69a4f5646d5035f49cdab021aae122dff23a353277101a7bb22b3508"
+      url "https://github.com/ContainerHive/ContainerHive/releases/download/v1.22.0/darwin-amd64.tar.zst"
+      sha256 "11df8c620d4c39fe7a4838200c3e25c3509f437046268444919922e8ccc1c053"
     end
   end
 
